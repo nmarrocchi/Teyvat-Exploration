@@ -1,0 +1,38 @@
+
+/* Mise en place d'une police d'écriture originale liée au thème du site web */
+@font-face {
+	font-family: "MH_Font";
+    src: url("../font/monsterhunter.ttf");
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+#PlayerStats{
+    overflow: hidden;
+    border-right: solid white 1px;
+    position: fixed;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    background-color: rgb(1, 41, 41);
+}
+
+#PlayerStats p{
+    
+}
+
+#PlayerStatsButton {
+    font-family: "MH_Font";
+    position: fixed;
+    top: 0px;
+    left: 10%;
+    width: 30px;
+    height:35px;
+}
+
+#PlayerStatsButton p{
+    margin: 3%;
+}

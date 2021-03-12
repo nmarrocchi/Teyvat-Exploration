@@ -1,0 +1,19 @@
+
+/* Mise en place d'une police d'écriture originale liée au thème du site web */
+@font-face {
+	font-family: "MH_Font";
+    src: url("../font/monsterhunter.ttf");
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background: url("../img/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
