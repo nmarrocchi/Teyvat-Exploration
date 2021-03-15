@@ -1,9 +1,12 @@
 
 /* Mise en place d'une police d'écriture originale liée au thème du site web */
 @font-face {
-	font-family: "MH_Font";
-    src: url("../font/monsterhunter.ttf");
-}
+    font-family: "Genshin_Impact";
+    src: url("../font/Genshin_Impact_Font.ttf");
+   }
+
+a:hover{cursor: url(img/Cursor.cur), pointer;}
+button:hover{cursor: url(img/Cursor.cur),pointer;}
 
 *{
     margin: 0%;
@@ -11,28 +14,74 @@
 }
 
 #PlayerStats{
+    font-size: 15px;
     overflow: hidden;
     border-right: solid white 1px;
-    position: fixed;
+    position: absolute;
     text-align: center;
+    left: 0%;
     width: 10%;
     height: 100%;
-    background-color: rgb(1, 41, 41);
-}
-
-#PlayerStats p{
-    
+    background-color: rgb(0, 0, 0);
 }
 
 #PlayerStatsButton {
-    font-family: "MH_Font";
+    font-family: "Genshin_Impact";
     position: fixed;
     top: 0px;
     left: 10%;
-    width: 30px;
-    height:35px;
+    width: 25px;
+    height: 35px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: solid white 2px;
+    border-radius: 5px;
 }
 
 #PlayerStatsButton p{
     margin: 3%;
+}
+
+#Stats {
+    width: 75%;
+    margin: 15% auto;
+    padding: 5% 2%;
+    border: solid white 1px;
+    border-radius: 10px;
+    background-color: rgb(0, 51, 51);
+}
+
+.Separator{
+    margin: 1% auto;
+}
+
+#Hp, #Mp{
+    text-align: left;
+    margin: 0% 0% 0% 15%;
+}
+
+#Hp{ color: rgb(197, 0, 0); }
+#Mp{ color: rgb(0, 153, 224); }
+#Exp { color: rgb(0, 236, 205); }
+
+#Money img{
+    width: 15px;
+    height: auto;
+    margin-right: 5%;
+}
+#Klee_Icon{
+    width: 70px;
+    margin: 5% auto;
+}
+
+#Genshin_Impact_Logo{
+    width: 100%;
+    margin: 5% auto 3% auto;
+}
+
+#Klee_Background{
+    position: absolute;
+    width: 90%;
+    bottom: 10px;
+    left: 4%;
 }

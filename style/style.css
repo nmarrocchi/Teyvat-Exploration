@@ -1,11 +1,15 @@
 
 /* Mise en place d'une police d'écriture originale liée au thème du site web */
 @font-face {
-	font-family: "MH_Font";
-    src: url("../font/monsterhunter.ttf");
-}
+    font-family: "Genshin_Impact";
+    src: url("../font/Genshin_Impact_Font.ttf");
+   }
+
+a:hover{cursor: url(img/Cursor.cur), pointer;}
+button:hover{cursor: url(img/Cursor.cur),pointer;}
 
 *{
+    font-family: 'Genshin_Impact';
     margin: 0%;
     padding: 0%;
 }
@@ -15,5 +19,6 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position-y: -50px;
     color: white;
 }
