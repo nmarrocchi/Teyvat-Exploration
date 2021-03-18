@@ -4,7 +4,7 @@
 
     <div id="Stats">
     
-        <img src="img/Klee_Icon.png" alt="Klee_Icon" id="Klee_Icon">
+        <img src="img/Traveler.png" alt="Traveler_Icon" id="Traveler_Icon">
         <p id="Username">0ver_Draw</p>
 
             <p class="Separator">----------------</p>
@@ -22,11 +22,16 @@
         
             <p class="Separator">----------------</p>
 
-        <p id="Money"><img src="img/coins.png" alt="Coins">:  3858</p>
+        <p id="Money"><img src="img/Primo-gems.png" alt="Coins">:  3858</p>
 
     </div>
 
-    <img id="Klee_Background" src="img/Klee_Background.png" alt="Klee_Background">
+    <div class="Account_menu">
+
+    <input type="button" id="login" href="login.php" value="login">
+    <input type="button" id="register" href="register.php" value="register">
+
+    </div>
 
 </div>
 

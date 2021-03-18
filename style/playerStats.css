@@ -69,7 +69,7 @@ button:hover{cursor: url(img/Cursor.cur),pointer;}
     height: auto;
     margin-right: 5%;
 }
-#Klee_Icon{
+#Traveler_Icon{
     width: 70px;
     margin: 5% auto;
 }
@@ -77,11 +77,4 @@ button:hover{cursor: url(img/Cursor.cur),pointer;}
 #Genshin_Impact_Logo{
     width: 100%;
     margin: 5% auto 3% auto;
-}
-
-#Klee_Background{
-    position: absolute;
-    width: 90%;
-    bottom: 10px;
-    left: 4%;
 }
