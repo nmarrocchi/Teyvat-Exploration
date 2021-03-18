@@ -20,7 +20,7 @@ button:hover{cursor: url(img/Cursor.cur),pointer;}
     position: absolute;
     text-align: center;
     left: 0%;
-    width: 10%;
+    width: 12%;
     height: 100%;
     background-color: rgb(0, 0, 0);
 }
@@ -29,7 +29,7 @@ button:hover{cursor: url(img/Cursor.cur),pointer;}
     font-family: "Genshin_Impact";
     position: fixed;
     top: 0px;
-    left: 10%;
+    left: 12%;
     width: 25px;
     height: 35px;
     background-color: rgb(0, 0, 0);
@@ -77,4 +77,26 @@ button:hover{cursor: url(img/Cursor.cur),pointer;}
 #Genshin_Impact_Logo{
     width: 100%;
     margin: 5% auto 3% auto;
+}
+
+.Account_menu{
+    position: absolute;
+    bottom: 0px;
+}
+
+.Account_menu input[type="button"]{
+    width: 209px;
+    height: 63px;
+    background-image: url(../img/Button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: transparent;
+    margin: 5% auto;
+}
+
+.Account_menu input[type="button"]:hover{
+    background-image: url(../img/Button_Hover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
