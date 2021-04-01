@@ -1,12 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION['logged'])){
-        $_SESSION['logged'] = 0;
-    }
-    else{
-    
-    }
-
+    require "functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +18,6 @@
     <body>
 
     <?php include "menu.php" ?>
-
-    <?php echo $_SESSION['logged'] ?>
 
     </body>
 

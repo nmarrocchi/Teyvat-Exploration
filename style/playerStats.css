@@ -85,7 +85,9 @@ button:hover{cursor: url(img/Cursor.cur),pointer;}
 }
 
 .Account_menu input[type="button"]{
-    width: 209px;
+    min-width: 209px;
+    max-width: 100%;
+    width: auto;
     height: 63px;
     background-image: url(../img/Button.png);
     background-size: cover;
