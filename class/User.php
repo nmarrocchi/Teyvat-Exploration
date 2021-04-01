@@ -42,11 +42,11 @@
                     <div class="Form_content">
 
                         <span>Username :
-                            <input type="text" id="l_username" required/>
+                            <input type="text" id="l_username" name="l_username" required/>
                         </span>
 
                         <span>Password :
-                            <input type="password" id="l_password" required />
+                            <input type="password" id="l_password" name="l_password" required />
                         </span>
 
                         <input type="submit" id="l_submit" name="l_submit" value="Login" />
@@ -57,12 +57,19 @@
             ');
         }
 
-        public function Login()
+        public function Login($username,$password)
         {
-            header("location: index.php");
+            $UserExist = $this->_bdd->query("SELECT count(*) FROM Users WHERE Username ='".$username."' AND Password ='".$password."'");
+            $UserInfos = $UserExist->fetch();
+            if ($UserInfos["count(*)"] == 1)
+            {
+                $this->_logged = 1;
+                $this->_username = $username;
+                $this->_password = $password;
+            }
         }
 
-        
+
 
 
         // - Fonctions GetRegisterForm & Register
@@ -71,7 +78,7 @@
         public function GetRegisterForm()
         {
             echo ('
-                <form method="POST" action="register_f.php">
+                <form method="POST" action="">
 
                     <div class="Form_content">
 
@@ -89,6 +96,16 @@
 
                 </form>
             ');
+        }
+
+        public function Register($username,$password)
+        {
+            $UserExist = $this->_bdd->query("SELECT count(*) FROM Users WHERE Username ='".$username."' AND Password ='".$password."'");
+            $UserInfos = $UserExist->fetch();
+            if ($UserInfos["count(*)"] == 0)
+            {
+                $this->_bdd->query("INSERT INTO Users (Username,Password) VALUES ('".$username."','".$password."')");
+            }
         }
 
 

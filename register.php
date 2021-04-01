@@ -1,6 +1,17 @@
 <?php
     session_start();
     require "functions.php";
+
+
+    if (isset($_POST['r_submit']))
+    {
+        $User->Login($_POST['r_username'] , $_POST['r_password']);
+    }
+    else
+    {
+        echo ' <script>console.log("Not Set")</script>';
+    }
+
 ?>
 
 <!DOCTYPE html>
