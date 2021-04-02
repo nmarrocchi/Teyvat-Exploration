@@ -48,8 +48,8 @@ else
 
 
 // - Create User
-function CreateUser($bdd,$Username){
-    $_SESSION['User'] = new User($bdd,$Username);
+function CreateUser($Username,$bdd){
+    $_SESSION['User'] = new User($Username);
 }
 
 ?>

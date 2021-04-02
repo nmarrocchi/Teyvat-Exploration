@@ -3,7 +3,7 @@
     require 'functions.php';
     CheckIfLog(basename(__FILE__));
 
-    $RegisterError = null;
+    $RegisterError = " Please Register You Here :";
 
     if(isset($_POST['R_Submit']))
     {

@@ -4,7 +4,7 @@
     require 'class/User.php';
     CheckIfLog(basename(__FILE__));
     
-    $LoginError = null;
+    $LoginError = " Please Login You Here :";
 
     if(isset($_POST['L_Submit']))
     {
