@@ -2,7 +2,7 @@
     require "class/User.php";
 
 
-    // - Gestion bdd
+    // - bdd
     $bdd = null;
     $errorMessage="";
 
@@ -15,6 +15,7 @@
         $errorMessage .= $e->getMessage();
     }
 
+    // - Create user if not set
     if(!isset($User))
     {
         $User = new User($bdd,0);

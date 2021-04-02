@@ -66,6 +66,8 @@
                 $this->_logged = 1;
                 $this->_username = $username;
                 $this->_password = $password;
+
+                header("location: index.php");
             }
         }
 
@@ -83,11 +85,11 @@
                     <div class="Form_content">
 
                         <span>Username :
-                            <input type="text" id="r_username" required/>
+                            <input type="text" id="r_username" name="r_username" required/>
                         </span>
                     
                         <span>Password :
-                            <input type="password" id="r_password" required />
+                            <input type="password" id="r_password" name="r_password" required />
                         </span>
 
                         <input type="submit" id="r_submit" name="r_submit" value="Register" />
@@ -106,6 +108,7 @@
             {
                 $this->_bdd->query("INSERT INTO Users (Username,Password) VALUES ('".$username."','".$password."')");
             }
+            else{}
         }
 
 

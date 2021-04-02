@@ -38,8 +38,7 @@
 
         <div class="Account_menu">
 
-        <a href="login.php"><input type="button" id="login" value="login"></a>
-        <a href="register.php"><input type="button" id="register" value="register"></a>
+       <input type="button" id="disconnect" value="Disconnect" onclick=""></a>
     
         </div>
 

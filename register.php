@@ -5,12 +5,10 @@
 
     if (isset($_POST['r_submit']))
     {
-        $User->Login($_POST['r_username'] , $_POST['r_password']);
+        $User->Register($_POST['r_username'] , $_POST['r_password']);
     }
     else
-    {
-        echo ' <script>console.log("Not Set")</script>';
-    }
+    {}
 
 ?>
 

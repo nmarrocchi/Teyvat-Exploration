@@ -7,10 +7,7 @@
     {
         $User->Login($_POST['l_username'] , $_POST['l_password']);
     }
-    else
-    {
-        echo ' <script>console.log("Not Set")</script>';
-    }
+    else{}
 
 ?>
 
