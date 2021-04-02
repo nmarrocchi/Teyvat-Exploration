@@ -1,17 +1,25 @@
-function ChangeValuePSB(id){ 
-    console.log(document.getElementById(id).value);
-	if (document.getElementById(id).value == ">")
-    {
-        document.getElementById(id).setAttribute("style", "left: 0%; transition: all 2s ease;");
-        document.getElementById('PlayerStats').setAttribute("style", "left: -12%; transition: all 2s ease;");
-        document.getElementById(id).value = "<";
+function ShowAndHideMenu($id,$value){
+    console.log($id + ' / ' + $value);
+
+    if($value == '>'){
+        document.getElementById($id).value = '<';
+        document.getElementById('menu').style.left = '-8%';
+        document.getElementById($id).style.left = '0%';
+        document.getElementById('menu').style.transition = 'transition-duration: 0.5s'
     }
-    else if(document.getElementById(id).value == "<")
-    {
-            document.getElementById(id).setAttribute("style", "left: 12%; transition: all 2s ease;");
-            document.getElementById('PlayerStats').setAttribute("style", "left: 0%; transition: all 2s ease;");
-            document.getElementById(id).value = ">";
+    else if($value == '<'){
+        document.getElementById($id).value = '>';
+        document.getElementById('menu').style.left = '0%';
+        document.getElementById($id).style.left = '8%';
+        document.getElementById('menu').style.transition = 'transition-duration: 0.5s'
+
     }
 
-    else{document.getElementById(id).value = "<"}
+}
+
+function ChangeText(valeur) 
+{
+    document.getElementById("ChooseButton").value = valeur;
+    document.getElementById("ChooseButton").value = 'Fight with ' + document.getElementById("ChooseButton").value;
+
 }

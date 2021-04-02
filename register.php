@@ -1,11 +1,25 @@
 <?php
     session_start();
-    require "functions.php";
+    require 'functions.php';
+    CheckIfLog(basename(__FILE__));
 
+    $RegisterError = null;
 
-    if (isset($_POST['r_submit']))
+    if(isset($_POST['R_Submit']))
     {
-        $User->Register($_POST['r_username'] , $_POST['r_password']);
+        $CheckUsers = $bdd->query("SELECT COUNT(*) FROM users WHERE Username = '".$_POST['R_Username']."' ");
+        print_r("SELECT COUNT(*) FROM Users WHERE Username = '".$_POST['R_Username']."' ");
+        $CountExistUser = $CheckUsers->fetch();
+        
+        if($CountExistUser['COUNT(*)'] > 0)
+        {
+            $RegisterError = 'This username is already taken';
+        }
+        else
+        {
+            $bdd->query("INSERT INTO users (`Username`, `Password`) VALUES ('".$_POST['R_Username']."','".$_POST['R_Password']."')");
+            $RegisterError = "Account Created, please login";
+        }
     }
     else
     {}
@@ -14,27 +28,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <title>Teyvat Exploration - Register</title>
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/png" href="img/Klee_Icon.png">
-        <link type="text/css" rel="stylesheet" href="style/style.css">
-        <link type="text/css" rel="stylesheet" href="style/playerStats.css">
-        <link type="text/css" rel="stylesheet" href="style/register.css">
-        <script type="text/javascript" src="functions.js"></script>
-        <title>Teyvat Exploration - register</title>
-    </head>
+    <?php 
+        require "menu.php";
+    ?>
 
-    <body>
+    <div id="content">
 
-    <?php include "menu.php" ?>
+        <form class="Register_Form" method="POST" href="">
 
-    <div class="content">
+            <p id="RegisterError"><?php echo $RegisterError ?></p>
 
-        <?php $User->GetRegisterForm(); ?>
+            <input type="text" id="R_Username" name="R_Username" placeholder="Enter your username (max 20 characters)" maxlength="20" required>
+            <input type="password" id="R_Password" name="R_Password" placeholder="Enter your password (max 20 characters)" maxlength="20" required>
+
+            <input type="submit" id="R_Submit" name="R_Submit" value="Register">
+
+        </form>
 
     </div>
-
-    </body>
-
+    
+    <?php include 'footer.php' ?>
+</body>
 </html>

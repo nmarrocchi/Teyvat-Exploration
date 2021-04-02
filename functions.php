@@ -1,26 +1,55 @@
-<?php 
-    require "class/User.php";
+
+<?php
+
+$bdd = new PDO("mysql:host=192.168.65.60;dbname=Teyvat_Exploration","root","root");
 
 
-    // - bdd
-    $bdd = null;
-    $errorMessage="";
-
-    try{
-            $user = "root";
-            $pass = "root";
-            $bdd = new PDO('mysql:host=192.168.65.60;dbname=Teyvat_Exploration', $user, $pass);
-            
-    }catch(Exception $e){
-        $errorMessage .= $e->getMessage();
-    }
-
-    // - Create user if not set
-    if(!isset($User))
+// - Redirect to index.php if User is logged
+function CheckIfLog($path)
+{
+    if(!isset($_SESSION['Logged']))
     {
-        $User = new User($bdd,0);
+        $_SESSION['Logged'] = 0;
+        CheckIfLog();
     }
-    else{}
+    else
+    {
+        if($_SESSION['Logged'] == 0)
+        {}
+        else
+        {
+            if($path !== 'index.php')
+            {
+                header('location: index.php');
+            }
+        }
+    }
+}
 
+
+// - If $_SESSION['Logged'] = 0, redirect to index.php
+function CheckUserCanAccess()
+{
+if(!isset($_SESSION['Logged']))
+{
+    $_SESSION['Logged'] = 0;
+    header('location: index.php');
+}
+else
+{
+    if($_SESSION['Logged'] == 0)
+    {
+        header('location: index.php');
+    }
+    else
+    {}
+}
+}
+
+
+// - Create User
+function CreateUser($bdd,$Username){
+    $_SESSION['User'] = new User($bdd,$Username);
+}
 
 ?>

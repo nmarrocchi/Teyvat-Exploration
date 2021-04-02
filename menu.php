@@ -1,65 +1,40 @@
-<div id="PlayerStats" class="open">
+<input type="button" id="show_hide_menu" onclick="ShowAndHideMenu(this.id,this.value)" value=">">
 
-    <img id="Genshin_Impact_Logo" src="img/Genshin_Impact_Logo.png" alt="Genshin_Impact_Logo">
+<div id="menu">
 
-   <?php 
-        $logged = $User->GetLogged();
-        if($logged == "1")
+    <?php
+        if($_SESSION['Logged'] == 0)
         {
-            echo('
-            <div id="Stats">
-    
-            <img src="img/Traveler.png" alt="Traveler_Icon" id="Traveler_Icon">
-            <p id="Username">
-            ');
-            
-            $User->GetUsername();
-            
-            echo('</p>
-    
-                <p class="Separator">----------------</p>
+    ?>
 
-            <p id="Hp">HP : 50</p>
-            <p id="Mp">MP : 40</p>
-    
-                <p class="Separator">----------------</p>
-    
-            <p>Level <span id="Level">11</span></p>
-    
-                <p class="Separator">----------------</p>
-    
-            <p id="Exp">Exp :  999 / 999 </p>
-            
-                <p class="Separator">----------------</p>
-    
-            <p id="Money"><img src="img/Primo-gems.png" alt="Coins">:  3858</p>
-    
-        </div>
+    <div id="menu_button">
 
-        <div class="Account_menu">
+        <li onclick="window.location.href = 'login.php'" >Login</li>
+        <li onclick="window.location.href = 'register.php'" >Register</li>
 
-       <input type="button" id="disconnect" value="Disconnect" onclick=""></a>
-    
-        </div>
+    </div>
 
-        ');
+    <?php
         }
         else
         {
-            echo('
-                <div class="Account_menu">
+        $_SESSION['User'] = new User($_SESSION['UserInfos'][0]);
+        ?>
 
-                <a href="login.php"><input type="button" id="login" value="login"></a>
-                <a href="register.php"><input type="button" id="register" value="register"></a>
-            
-                </div>
-            ');
+        <div id="User_Infos">
+            <p id="User_Username"><?php $_SESSION['User']->GetUsername()?></p>
+
+            <hr>
+        </div>
+
+        <div id="menu_button">
+
+            <li onclick="window.location.href = 'disconnect.php'" >Disconnect</li>
+
+        </div>  
+        
+        <?php
         }
     ?>
 
-
-
 </div>
-
-
-<input id="PlayerStatsButton" type="button" onclick="ChangeValuePSB('PlayerStatsButton')" value=">">
