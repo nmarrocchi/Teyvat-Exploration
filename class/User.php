@@ -7,10 +7,9 @@ class User
     private $_bdd;
 
 
-    public function __construct($username,$bdd)
+    public function __construct($username)
     {
         $this->_username = $username;
-        $this->_bdd = $bdd;
     }
 
     public function GetUsername(){
