@@ -14,29 +14,19 @@
     <script src="functions.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/characters.css">
     <title>Teyvat Exploration - Choose</title>
 </head>
 <body>
 
     <?php 
         require "menu.php";
-        $AnemoResult = $bdd->query("SELECT * FROM Characters WHERE Element='Anemo' OR Element='Multi'");
-        $PyroResult = $bdd->query("SELECT * FROM Characters WHERE Element='Pyro'");
-        $ElectroResult = $bdd->query("SELECT * FROM Characters WHERE Element='Electro'");
-        $CryoResult = $bdd->query("SELECT * FROM Characters WHERE Element='Cryo'");
-        $GeoResult = $bdd->query("SELECT * FROM Characters WHERE Element='Geo' OR Element='Multi'");
-        $HydroResult = $bdd->query("SELECT * FROM Characters WHERE Element='Hydro'");
     ?>
 
     <div id="content">
         <h1>Teyvat Exploration Battle Preparation</h1>
 
-        <h2><u>Choose a character :</u></h2>
-
-        <?php 
-            $AnemoChar = $bdd->query("SELECT * FROM characters WHERE Element='Anemo' ORDER BY Name Asc");
-            $PyroChar = $bdd->query("SELECT * FROM characters WHERE Element='Pyro' ORDER BY Name Asc");
-        ?>            
+        <h2><u>Choose a character :</u></h2>         
 
 <!---------------------------------->
 <?php

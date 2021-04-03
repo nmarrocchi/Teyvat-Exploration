@@ -1,0 +1,94 @@
+#Anemo_Characters, #Pyro_Characters, #Electro_Characters, #Cryo_Characters, #Geo_Characters, #Hydro_Characters{
+    background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    margin: 3% auto;
+    border-radius: 20px;
+    min-width: max-content;
+    width: 75%;
+    height: 300px;
+}
+
+#Anemo_Characters{
+    background-image: url(../img/Anemo_Logo.png);
+    border: solid rgba(153,255,239,0.5) 3px;
+}
+
+#Pyro_Characters{
+    background-image: url(../img/Pyro_Logo.png);
+    border: solid rgba(255, 147, 132, 0.5) 3px;
+}
+
+#Electro_Characters{
+    background-image: url(../img/Electro_Logo.png);
+    border: solid rgba(241,158,250,0.5) 3px;
+}
+
+#Cryo_Characters{
+    background-image: url(../img/Cryo_Logo.png);
+    border: solid rgba(255, 147, 132, 0.5) 3px;
+}
+
+#Geo_Characters{
+    background-image: url(../img/Geo_Logo.png);
+    border: solid rgba(153,255,239,0.5) 3px;
+}
+
+#Hydro_Characters{
+    background-image: url(../img/Hydro_Logo.png);
+    border: solid rgba(255, 147, 132, 0.5) 3px;
+}
+
+.Element{
+    width: 100%;
+    margin: 1% 3%;
+    text-align: left;
+}
+
+.Element_icon{
+    height: 50px;
+    display: block;
+}
+
+.Element img, .Element h3{
+    display: inline-block;
+    vertical-align: middle;
+    left: 0px;
+}
+
+.Element h3{
+    margin-left: 1%;
+}
+
+.Element_Characters{
+    width: 90%;
+    height: 160px;
+    position: static;
+    margin: 2% auto 1% auto;
+    bottom: 0px;
+}
+
+.Element_Characters td{
+    height: 160px;
+    width: 150px;
+}
+
+.Character{
+    width: 140px;
+    height: 150px;
+    vertical-align: middle;
+    -webkit-transition: all 0.4s ease; /* Safari et Chrome */
+    -moz-transition: all 0.4s ease; /* Firefox */
+    -ms-transition: all 0.4s ease; /* Internet Explorer 9 */
+    -o-transition: all 0.4s ease; /* Opera */
+    transition: all 0.4s ease;
+}
+
+.Character:hover{
+-webkit-transform:scale(1.1); /* Safari et Chrome */
+-moz-transform:scale(1.1); /* Firefox */
+-ms-transform:scale(1.1); /* Internet Explorer 9 */
+-o-transform:scale(1.1); /* Opera */
+transform:scale(1.1);
+}

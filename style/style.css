@@ -31,10 +31,11 @@ html{
 
 #content{
     margin: 6% auto ;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: solid black 1px;
+    background-color:transparent;
+    border: transparent 1px;
     width: 65%;
     text-align: center;
+    color: white;
 }
 
 #content h1{
@@ -44,6 +45,12 @@ html{
 
 #content h2{
     margin: 4% 0%;
+}
+
+#WELCOME{
+    margin: 1%;
+    height: auto;
+    width: 800px;
 }
 
 .Login_Form, .Register_Form{
@@ -103,44 +110,22 @@ html{
     margin: 11%;
 }
 
-#ChooseButton{
+#ChooseButton, #Battle_button{
     display: block;
     min-width: max-content;
     margin: 4% auto 2% auto;
-    width: 209px;
+    width: 215px;
     height: auto;
-    min-height: 63px;
+    min-height: 69px;
     background-color: transparent;
     background-image: url(../img/Button.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     border: solid transparent 1px;
     font-family: "Genshin_Impact";
 }
 
-#ChooseButton:hover{
+#ChooseButton:hover, #Battle_button:hover{
     background-image: url(../img/Button_Hover.png);
     border: solid transparent 1px;
-}
-
-#bg{
-    display:block;
-    width: 40%;
-    left:0;
-    top:0;
-    padding:0;
-    margin: 5% auto;
-    border: solid black 2px;
-    border-radius: 30px;
-}
-
-#b_1, #b_2, #b_3, #b_4, #b_5, #b_6, #b_7, #b_8, #b_9, #b_10, #b_11, #b_12, #b_13, #b_14, #b_15, #b_16, #b_17, #b_18, #b_19, #b_20, #b_21, #b_22, #b_23, #b_24, #b_25, #b_26, #b_27, #b_28, #b_29, #b_30, #b_31{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent;
-    border: solid black 1px;
-    border-radius: 10px;
-    height: 70px;
-    width: 70px;
-    margin: 1%;
 }
