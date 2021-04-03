@@ -38,11 +38,13 @@
             <p>If you would like to join us, first please create an account and login</p>
         </h2>
 
+        <img id="WELCOME" src="img/WELCOME.png" alt="WELCOME">
+
         <?php
             if($_SESSION['Logged'] == 1)
             {
         ?>
-            <input type="button" id="Battle_button" onclick="window.location.href = 'choose.php'" value="Go to battle">
+            <input type="button" id="Battle_button" onclick="window.location.href = 'choose.php'" value="Go to choose">
         <?php
             }
             else{}
