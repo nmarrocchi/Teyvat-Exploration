@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb4+deb9u2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Client :  localhost:3306
--- Généré le :  Lun 15 Mars 2021 à 23:53
--- Version du serveur :  10.1.48-MariaDB-0+deb9u1
--- Version de PHP :  7.0.33-0+deb9u10
+-- Hôte : 127.0.0.1:3306
+-- Généré le : sam. 03 avr. 2021 à 23:42
+-- Version du serveur :  5.7.31
+-- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,27 +18,29 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `Teyvat_Exploration`
+-- Base de données : `teyvat_exploration`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Characters`
+-- Structure de la table `characters`
 --
 
-CREATE TABLE `Characters` (
-  `ID` int(11) NOT NULL,
+DROP TABLE IF EXISTS `characters`;
+CREATE TABLE IF NOT EXISTS `characters` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(30) NOT NULL,
   `Element` varchar(30) NOT NULL,
-  `Weapon_Type` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `Weapon_Type` varchar(30) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
 
 --
--- Contenu de la table `Characters`
+-- Déchargement des données de la table `characters`
 --
 
-INSERT INTO `Characters` (`ID`, `Name`, `Element`, `Weapon_Type`) VALUES
+INSERT INTO `characters` (`ID`, `Name`, `Element`, `Weapon_Type`) VALUES
 (1, 'Amber', 'Pyro', 'Bow'),
 (2, 'Barbara', 'Hydro', 'Catalyst'),
 (3, 'Beidou', 'Electro', 'Two Hand Sword'),
@@ -48,7 +51,7 @@ INSERT INTO `Characters` (`ID`, `Name`, `Element`, `Weapon_Type`) VALUES
 (8, 'Kaeya', 'Cryo', 'One Hand Sword'),
 (9, 'Lisa', 'Electro', 'Catalyst'),
 (10, 'Ningguang', 'Geo', 'Catalyst'),
-(11, 'Noëlle', 'Geo', 'Two Hand Sword'),
+(11, 'Noelle', 'Geo', 'Two Hand Sword'),
 (12, 'Razor', 'Electro', 'Two Hand Sword'),
 (13, 'Sucrose', 'Anemo', 'Catalyst'),
 (14, 'Xiangling', 'Pyro', 'Spear'),
@@ -64,61 +67,35 @@ INSERT INTO `Characters` (`ID`, `Name`, `Element`, `Weapon_Type`) VALUES
 (24, 'Mona', 'Hydro', 'Catalyst'),
 (25, 'Qiqi', 'Cryo', 'One Hand Sword'),
 (26, 'Tartaglia', 'Hydro', 'Bow'),
-(27, 'Lumine', 'Anemo', 'One Hand Sword'),
-(28, 'Aether', 'Geo', 'One Hand Sword'),
+(27, 'Traveler (Geo)', 'Geo', 'One Hand Sword'),
+(28, 'Traveler (Anemo)', 'Anemo', 'One Hand Sword'),
 (29, 'Venti', 'Anemo', 'Bow'),
 (30, 'Xiao', 'Anemo', 'Spear'),
-(31, 'Zhongli', 'Geo', 'Spear');
+(31, 'Zhongli', 'Geo', 'Spear'),
+(32, 'Ayaka', 'Cryo', 'One Hand Sword');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Users`
+-- Structure de la table `users`
 --
 
-CREATE TABLE `Users` (
-  `ID` int(11) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Username` varchar(20) NOT NULL,
-  `Password` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `Password` varchar(20) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 --
--- Contenu de la table `Users`
+-- Déchargement des données de la table `users`
 --
 
-INSERT INTO `Users` (`ID`, `Username`, `Password`) VALUES
+INSERT INTO `users` (`ID`, `Username`, `Password`) VALUES
 (1, '0ver_Draw', '1234');
+COMMIT;
 
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `Characters`
---
-ALTER TABLE `Characters`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Index pour la table `Users`
---
-ALTER TABLE `Users`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `Characters`
---
-ALTER TABLE `Characters`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
---
--- AUTO_INCREMENT pour la table `Users`
---
-ALTER TABLE `Users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
