@@ -41,7 +41,7 @@
 
             <div class="Elements_Infos">
                 <div class="Element">
-                    <img class="Element_icon" src="img/elements/<?php echo $ElementType[$i]?>.png" alt="<?php echo $ElementType[$i]?>"><h3>Anémo</h3>
+                    <img class="Element_icon" src="img/elements/<?php echo $ElementType[$i]?>.png" alt="<?php echo $ElementType[$i]?>"><h3><?php echo $ElementType[$i]?></h3>
                 </div>
                 <div class="Element_Characters">
                     <table>
