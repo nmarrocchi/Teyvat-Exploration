@@ -8,7 +8,7 @@
 
     if(isset($_POST['L_Submit']))
     {
-        $CheckUsers = $bdd->query("SELECT COUNT(*) FROM Users WHERE Username = '".$_POST['L_Username']."' AND Password = '".$_POST['L_Password']."'");
+        $CheckUsers = $bdd->query("SELECT COUNT(*) FROM users WHERE Username = '".$_POST['L_Username']."' AND Password = '".$_POST['L_Password']."'");
         $CountExistUser = $CheckUsers->fetch();
         
         if($CountExistUser['COUNT(*)'] > 0)
