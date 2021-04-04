@@ -49,7 +49,7 @@
                             <?php while($CharRequest = $CharElementRequest->fetch()){
                                 echo'
                                     <td>
-                                        <img class="Character" name="'.$CharRequest["Name"].'" src="img/characters/'.$CharRequest["Name"].'" alt="'.$CharRequest["Name"].'" onclick="ChangeText(this.name);">
+                                        <img class="Character" name="'.$CharRequest["Name"].'" src="img/characters/'.$CharRequest["Name"].'.png" alt="'.$CharRequest["Name"].'" onclick="ChangeText(this.name);">
                                     </td>
                                 ';
                             }
@@ -72,17 +72,3 @@
     <?php include 'footer.php' ?>
 </body>
 </html>
-
-<!--
-<php
-            $Result = $bdd->query("SELECT * FROM Characters "); 
-
-            while($tab=$Result->fetch()){
-                ?>
-
-                <input type="button" name="<php echo $tab['Name'] ?>" id="b_<php echo $tab['ID'] ?>" onclick="ChangeText(this.name);" style="background-image: url('img/characters/<php echo $tab['Name'] ?>.png');"/>
-
-                <php
-            }
-            ?>
-            -->
