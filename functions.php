@@ -1,7 +1,7 @@
 
 <?php
 
-$bdd = new PDO("mysql:host=localhost;dbname=Teyvat_Exploration","root","root");
+$bdd = new PDO("mysql:host=mysql-teyvat-exploration.alwaysdata.net;dbname=Teyvat_Exploration_Teyvat_Exploration","root","root");
 
 
 // - Redirect to index.php if User is logged
