@@ -16,7 +16,7 @@
             $_SESSION['UserInfos'] = array($_POST['L_Username']);
             $LoginError = 'You successfully connected ! You can go to the battle';
             $_SESSION['Logged'] = 1;
-            header('location: index.php');
+            header('location: choose.php');
         }
         else
         {

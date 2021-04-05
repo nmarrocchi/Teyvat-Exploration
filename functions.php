@@ -2,7 +2,6 @@
 <?php
 
 $bdd = new PDO("mysql:host=mysql-teyvat-exploration.alwaysdata.net;dbname=teyvat-exploration_teyvat-exploration","231361","0ver_Draw070902");
-//$bdd = new PDO("mysql:host=localhost;dbname=Teyvat_Exploration","root","root");
 
 
 // - Redirect to index.php if User is logged
@@ -43,7 +42,9 @@ else
         header('location: index.php');
     }
     else
-    {}
+    {
+        $_SESSION['User'] = new User($_SESSION['UserInfos'][0]);
+    }
 }
 }
 

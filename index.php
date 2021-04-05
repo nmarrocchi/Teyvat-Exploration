@@ -6,6 +6,10 @@
     {
         $_SESSION['Logged'] = 0;
     }
+    else if($_SESSION['Logged'] == 1)
+    {
+        header('Location: choose.php');
+    }
     else{}
 
 ?>
