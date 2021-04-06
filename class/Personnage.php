@@ -1,9 +1,8 @@
 <?php
 
-class User
+class Personnage
 {
     private $_bdd;
-    private $_username;
     private $_character;
 
     private $_maxHealth;
@@ -12,17 +11,12 @@ class User
     private $_def;
 
 
-    public function __construct($username)
+    public function __construct($character)
     {
-        $this->_username = $username;
+        $this->_character = $character;
     }
 
     // - Get User Pseudo
-    public function GetUsername()
-    {
-        echo $this->_username;
-    }
-
     public function GetCharacter()
     {
         echo $this->_character;

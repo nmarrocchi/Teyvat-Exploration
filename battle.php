@@ -2,10 +2,11 @@
     session_start();
     require 'functions.php';
     require 'class/User.php';
+    require 'class/Personnage.php';
     CheckUserCanAccess();
     $character = $bdd->query("SELECT * FROM characters WHERE Name = '".$_GET["character"]."'");
     $stats = $character->fetch();
-    $_SESSION['User']->SetCharacter($stats,$_GET['character']);
+    $_SESSION['User']->SetCharacter($stats, $_GET["character"]);
 
     $enemys = array('Arbalétrier Brutocollinus','Brutoshaman Anémo','Mage Électroluciole');
     $i = rand(0,2);

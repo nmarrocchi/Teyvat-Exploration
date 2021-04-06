@@ -27,9 +27,6 @@
                         <div id="Character_Infos">
                             <img id="User_character_pic" src="img/characters/<?php $_SESSION['User']->GetCharacter()?>.png" alt="Character">
                             <p id="User_character"><?php $_SESSION["User"]->GetCharacter()?></p>
-                            <p id="User_character_Health">HP : <?php $_SESSION['User']->GetCharacterHealth()?> / <?php $_SESSION['User']->GetCharacterMaxHealth()?></p>
-                            <p id="User_character_Attack">Atk : <?php $_SESSION['User']->GetCharacterAtk()?></p>
-                            <p id="User_character_Defense">Def : <?php $_SESSION['User']->GetCharacterDef()?></p>
                         </div>
 
             <hr>
