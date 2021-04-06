@@ -59,13 +59,18 @@
     width: 70%;
     background-color: black;
     border: solid white 2px;
+    border-radius: 20px;
     margin: 5% auto;
     padding: 5%;
     color: white;
 }
 
-#User_Username, #Character_Infos, #User_character{
+#User_Username, #Character_Infos{
     margin: 5% 0%;
+}
+
+#User_character{
+    margin: 5% auto 8% auto;
 }
 
 #change_character_button{
@@ -84,4 +89,20 @@
 
 #change_character_button:hover{
     background-image: url(../img/Button_Hover.png);
+}
+
+#User_character_Health, #User_character_Attack, #User_character_Defense{
+    margin: 3% auto;
+}
+
+#User_character_Health{
+    color: rgb(253, 70, 38);
+}
+
+#User_character_Attack{
+    color: rgb(184, 0, 0);
+}
+
+#User_character_Defense{
+    color: rgb(185, 185, 0);
 }

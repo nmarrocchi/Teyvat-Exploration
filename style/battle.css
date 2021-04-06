@@ -1,0 +1,8 @@
+#Battle{
+    border: solid white 1px;
+}
+
+#Enemy{
+    width: auto;
+    height: 130px;
+}

@@ -6,7 +6,9 @@
     $character = $bdd->query("SELECT * FROM characters WHERE Name = '".$_GET["character"]."'");
     $stats = $character->fetch();
     $_SESSION['User']->SetCharacter($stats,$_GET['character']);
-    
+
+    $enemys = array('Arbalétrier Brutocollinus','Brutoshaman Anémo','Mage Électroluciole');
+    $i = rand(0,2);
     
 ?>
 
@@ -20,6 +22,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/menu.css">
     <link rel="stylesheet" href="style/characters.css">
+    <link rel="stylesheet" href="style/battle.css">
     <title>Teyvat Exploration - Battle</title>
 </head>
 <body>
@@ -30,8 +33,14 @@
 
     <div id="content">
         <h1>Teyvat Exploration Battle Phase</h1>
+
+        <div id="Battle">
+            Enemy : <?php echo $enemys[$i] ?>
+            <img id="Enemy" src="img/enemys/<?php echo $enemys[$i] ?>.png" alt="<?php echo $enemys[$i] ?>">
+        </div>
+
     </div>
-    
+
     <?php include 'footer.php' ?>
 </body>
 </html>
